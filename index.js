@@ -17,6 +17,6 @@ app.use('/api/v1/exp',authUser,expRouter);
 app.use('/api/v1/admin',authUser,adminAct,adminACTIVITYRouter);
 
 connectdb(process.env.URL);
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log("connected to",process.env.PORT);
 })
